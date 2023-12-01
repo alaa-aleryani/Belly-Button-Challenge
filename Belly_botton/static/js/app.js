@@ -65,7 +65,8 @@ function demoInfoBox(id) {
 // --------------------------------------------------------
 // Update all the plots when a new sample is selected. 
 function optionChanged(id) {
-    demoInfoBox(id) };
+         demoInfoBox(id) 
+         buildCharts(id)};
 
 // -----------------------------------------------------------------------------------------------
 //                                    Create A chart Function                                     //
