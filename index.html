@@ -9,10 +9,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <!-- -------------------------------- Our CSS -------------------------------- -->
-  <style>
+  <!-- <style>
     /* Add light colors to the background */
     body {
-      background: linear-gradient(0.25turn, #3f87a6, #e1f7f8, #f69d3c);
+      background: rgb(40,40,40);
       color: black;
     }
         /* Customize the Jumbotron - The background for the page header */
@@ -22,52 +22,69 @@
       text-align: center;
       color: white;
     }
-    /* Change color in the panel-body */
-    .panel-body {
-        background: hsl(240, 25%, 50%);}
-  
-    .panel-heading {
-        background: hsl(240, 25%, 50%);}
 
+    .well {
+        background:rgb(88,88,88);
+        color: white;
+    }
 
-  </style>
+    #selDataset {
+        background: rgb(88,88,88);
+        color: white;
+    }
+  </style> -->
+
+  <!-- -------------------------------- END CSS -------------------------------- -->
 
 </head>
 
 <body>
 
   <div class="container">
+    
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>Belly Button Biodiversity Dashboard</h1>
         <p>Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
+
     <div class="row">
       <div class="col-md-2">
+
         <div class="well">
           <h5>Test Subject ID No.:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select> 
         </div>
+
         <div class="panel panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title">Demographic Info</h3>
           </div>
-          <div id="sample-metadata" class="panel-body"></div> 
+          <div id="sample-metadata" class="panel-body">
+          </div> 
+        </div>
+
+      </div>
+
+      <div class="col-md-5">
+        <div id="bar">
         </div>
       </div>
+
       <div class="col-md-5">
-        <div id="bar"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
-      </div>
+        <div id="gauge">
+        </div>
+      </div> 
     </div>
+
     <div class="row">
       <div class="col-md-12">
-        <div id="bubble"></div>
+        <div id="bubble">
+        </div>
       </div>
     </div>
+
   </div>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>   <!--d3 library-->
